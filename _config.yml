@@ -8,7 +8,7 @@ title:            David Vávra
 tagline:          'Disco Inferno'
 description:      'Blurbs about games, books and whatever I fancy. '
 url:              https://than3s.github.io
-baseurl:          '/hydeout'
+baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
