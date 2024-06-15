@@ -28,7 +28,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
-theme: fongandrew/hydeout
+remote_theme: fongandrew/hydeout
 
 # Sidebar link settings
 sidebar_home_link:  true
