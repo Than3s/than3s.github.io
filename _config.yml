@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
-remote_theme: fongandrew/hydeout
+
 
 # Setup
 title:            David Vávra
@@ -27,6 +27,8 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+
+theme: fongandrew/hydeout
 
 # Sidebar link settings
 sidebar_home_link:  true
