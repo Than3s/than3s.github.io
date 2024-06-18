@@ -9,7 +9,7 @@ With our DnD group, horror campaigns are difficult to run. We've spent around tw
 
 But we had a great time! Were we scared? No. But fun was had, Strahd is dead (or so we think) and it was my turn to GM. And my brilliant idea was another iconic horror, this time in sci-fi environment. 
 
-![image]("/_screenshots/strahd_meme.png")
+![image](/assets/images/strahd_meme.png)
 
 ## A horror where no one will scream
 
