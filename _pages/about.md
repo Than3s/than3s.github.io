@@ -1,29 +1,24 @@
 ---
 layout: page
-title: About
+title: ""
 permalink: /about/
 ---
+# Who?
+Hi, I'm David and I'm a game developer! I was lucky to work on games ranging from educational, to mobile and even AA(A), mainly as a Producer and QA. If you want to more *professional* introduction, just head to my [LinkedIn](https://www.linkedin.com/in/david-v%C3%A1vra-b6b811a5/) but here are the main projects I've worked on.
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+- [Attentat 1942](https://attentat1942.com/)
+- [Svoboda 1945](https://svoboda1945.com/cs/)
+- [Smashing Four](https://smashingfour.com/)
+- [Kingdom Come: Deliverance 2](https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/)
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Oh and card games! I'm a big fan of LCGs and digital card games and several years ago I'd had an opportunity to co-design [Opráski sčeskí historje](https://www.opraski.cz/o-kartach) card game. 
 
-## Features
+And now I'm in mobile games industry, yet again.
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+# Why? 
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+I love games. I grew up with them, somehow managed to work in the industry since 2011 and I'm still having fun. This blog is about what I find interesting about games, "nerd" culture and whatever seems interesting to me at the time. I hope you like reading about watches or choosing an office chair. 
+
+Talking and writing about games is my passion and main hobby, and it doesn't seem like that's going to change anytime soon. I also co-host Czech gaming podcast [Lootbox](https://podcasters.spotify.com/pod/show/lootbox) and realized I just need to "vent" about games more and in other languages.
+
+So welcome! You will have a nice time (you have no choice) and hopefully enjoy my ramblings.
