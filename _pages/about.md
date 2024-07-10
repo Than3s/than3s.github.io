@@ -4,7 +4,7 @@ title: ""
 permalink: /about/
 ---
 # Who?
-Hi, I'm David and I'm a game developer! I was lucky to work on games ranging from educational, to mobile and even AA(A), mainly as a Producer and QA. If you want to more *professional* introduction, just head to my [LinkedIn](https://www.linkedin.com/in/david-v%C3%A1vra-b6b811a5/) but here are the main projects I've worked on.
+Hi, I'm David and I'm a game developer! I was lucky to work on games ranging from educational, to mobile and even AA(A), mainly as a Producer and QA. If you want to read more *professional* introduction, just head to my [LinkedIn](https://www.linkedin.com/in/david-v%C3%A1vra-b6b811a5/) but here are the main projects I've worked on.
 
 - [Attentat 1942](https://attentat1942.com/)
 - [Svoboda 1945](https://svoboda1945.com/cs/)
