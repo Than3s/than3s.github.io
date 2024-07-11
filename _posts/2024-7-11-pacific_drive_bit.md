@@ -6,13 +6,15 @@ categories: gamedesign
 
 I'm really not into cars. At all. What I care about is that it can get me from point A to point B, preferably with all tires intact and nothing smoking. All the carburetors (we all know that's not even a real word), engines and... break liquids just leave me yawning and wanting to run away. Preferably somewhere where they can't get to me in a car.  
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BGk2u9-GRTA
+" target="_blank"><img src="http://img.youtube.com/vi/BGk2u9-GRTA/0.jpg" 
+alt="Pacific Drive Trailer" width="920" height="520" border="10" /></a>
+
 Video games are not an exception. I find racing games incredibly boring - well unless you can crash the car into something, intentionally catapulting the driver and make it a nice chain reaction of catastrophes. God, I miss Flatout. But otherwise I just don't see the appeal at all.
 
 But Pacific Drive is different. I LOVE the car in the game. During your roguelite style runs through the Olympic Exclusion Zone you dent it, lose your tires and its engine occasionally bursts into flames, but it will always get you home safe. And you feel that you need to repay the favor. So you lovingly change the broken doors, fix the tires and get a better bumper for it. While you're at it, why not paint it red as well? Oooh and you can add some cool racing stickers!
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BGk2u9-GRTA
-" target="_blank"><img src="http://img.youtube.com/vi/BGk2u9-GRTA/0.jpg" 
-alt="Pacific Drive Trailer" width="920" height="520" border="10" /></a>
+![My car](/images/auto_drive.png)
 
 The car in Pacific Drive is more than a tool, it's your lifeline and only mean of transport. And the game puts a lot of effort that you like it and take care of it. It's also a bit... Alive. And that's where quirks come into the picture. 
 
@@ -37,7 +39,5 @@ After 10 minutes of jumping on the car, opening every single door, aggressively 
 Then you just feed the computer some Electronics kit and all is fixed! If the real life therapy would be this easy, the therapist would be without jobs.
 
 I ADORE this system. It made me feel the same as in "real" QA at my job, but just the best part of it - when you see a fascinating bug and then you need to find out what the hell is happening. And you try everything, all the possible combinations and suddenly WHOA, you get it! The devs will be so happy! Well, sometimes. 
-
-![My car](/images/auto_drive.png)
 
 Quirks are a great system not only mechanically but also in reminding you, that the car is not only a thing, but it's alive. It's the main character of the game, and you need to take care of it. Quirks are helping establishing a connection between it and you as a player. Can it be annoying? Definitely - I even got the same quirk an hour after this. But that doesn't cheapen the feeling when you solve the first one, and you have the ME SMART moment.
