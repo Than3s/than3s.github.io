@@ -6,9 +6,9 @@ categories: gamedesign
 
 I'm really not into cars. At all. What I care about is that it can get me from point A to point B, preferably with all tires intact and nothing smoking. All the carburetors (we all know that's not even a real word), engines and... break liquids just leave me yawning and wanting to run away. Preferably somewhere where they can't get to me in a car.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BGk2u9-GRTA?si=zKXd5r7kLZBPATM2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 Video games are not an exception. I find racing games incredibly boring - well unless you can crash the car into something, intentionally catapulting the driver and make it a nice chain reaction of catastrophes. God, I miss Flatout. But otherwise I just don't see the appeal at all.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BGk2u9-GRTA?si=zKXd5r7kLZBPATM2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 But Pacific Drive is different. I LOVE the car in the game. During your roguelite style runs through the Olympic Exclusion Zone you dent it, lose your tires and its engine occasionally bursts into flames, but it will always get you home safe. And you feel that you need to repay the favor. So you lovingly change the broken doors, fix the tires and get a better bumper for it. While you're at it, why not paint it red as well? Oooh and you can add some cool racing stickers!
 
