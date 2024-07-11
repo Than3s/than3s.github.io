@@ -12,9 +12,9 @@ Video games are not an exception. I find racing games incredibly boring - well u
 
 But Pacific Drive is different. I LOVE the car in the game. During your roguelite style runs through the Olympic Exclusion Zone you dent it, lose your tires and its engine occasionally bursts into flames, but it will always get you home safe. And you feel that you need to repay the favor. So you lovingly change the broken doors, fix the tires and get a better bumper for it. While you're at it, why not paint it red as well? Oooh and you can add some cool racing stickers!
 
-![My car](/images/auto_drive.png)
-
 The car in Pacific Drive is more than a tool, it's your lifeline and only mean of transport. And the game puts a lot of effort that you like it and take care of it. It's also a bit... Alive. And that's where quirks come into the picture. 
+
+![My car](/images/auto_drive.png)
 
 ## Quirks
 
