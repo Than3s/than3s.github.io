@@ -6,9 +6,7 @@ categories: gamedesign
 
 I'm really not into cars. At all. What I care about is that it can get me from point A to point B, preferably with all tires intact and nothing smoking. All the carburetors (we all know that's not even a real word), engines and... break liquids just leave me yawning and wanting to run away. Preferably somewhere where they can't get to me in a car.  
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BGk2u9-GRTA
-" target="_blank"><img src="http://img.youtube.com/vi/BGk2u9-GRTA/0.jpg" 
-alt="Pacific Drive Trailer" width="920" height="520" border="10" /></a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BGk2u9-GRTA?si=zKXd5r7kLZBPATM2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Video games are not an exception. I find racing games incredibly boring - well unless you can crash the car into something, intentionally catapulting the driver and make it a nice chain reaction of catastrophes. God, I miss Flatout. But otherwise I just don't see the appeal at all.
 
