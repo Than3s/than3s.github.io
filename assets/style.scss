@@ -313,9 +313,9 @@ p > img {
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 28px;
-  letter-spacing: 1px;
+  letter-spacing: -2px;
   text-align: left;
 
   @include mobile {
@@ -382,7 +382,7 @@ nav {
     color: $gray;
     font-size: 22px;
     font-style: italic;
-    background-color: #ede1ff;
+    background-color: #FFF585;
   }
 
   .you-may-like{
@@ -704,7 +704,7 @@ Modules - reusable parts of our design
   font-size: 14.5px;
   padding: 2px 13px;
   border: none;
-  background-color: #4CAF50;
+  background-color: #134E87;
   border-radius: 50px;
   color: #fff;
 }
