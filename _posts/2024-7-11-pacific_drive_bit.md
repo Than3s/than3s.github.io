@@ -34,8 +34,8 @@ Obviously, that was not the correct answer. The system helps you - it told me I 
 After 10 minutes of jumping on the car, opening every single door, aggressively swerving the wheel left and right the DAMN car kept opening the door. And then I noticed something - the FRONT LIGHTS were ON the whole time! And yep, that was it. 
 > IF HEADLIGHTS STAY ON, THE FRONT DOOR OPENS.
 
-Then you just feed the computer some Electronics kit and all is fixed! If the real life therapy would be this easy, the therapist would be without jobs.
+Then you just feed the computer some Electronics kit and all is fixed! If real life therapy would be this easy, the therapist would be without jobs.
 
-I ADORE this system. It made me feel the same as in "real" QA at my job, but just the best part of it - when you see a fascinating bug and then you need to find out what the hell is happening. And you try everything, all the possible combinations and suddenly WHOA, you get it! The devs will be so happy! Well, sometimes. 
+I ADORE this system. It made me feel the same as I do at my "real" QA, but just the best part of it - when you see a fascinating bug and then you need to find out what the hell is happening. And you try everything, all the possible combinations and suddenly WHOA, you get it! The devs will be so happy! Well, sometimes. 
 
-Quirks are a great system not only mechanically but also in reminding you, that the car is not only a thing, but it's alive. It's the main character of the game, and you need to take care of it. Quirks are helping establishing a connection between it and you as a player. Can it be annoying? Definitely - I even got the same quirk an hour after this. But that doesn't cheapen the feeling when you solve the first one, and you have the ME SMART moment.
+Quirks are a great system not only mechanically but also in reminding you, that the car is not only a thing, but it's alive. It's the main character of the game, and you need to take care of it. Quirks are helping to establish a connection between it and you as a player. Can it be annoying? Definitely - I even got the same quirk an hour after this. But that doesn't cheapen the feeling when you solve the first one, and you have the ME SMART moment.
