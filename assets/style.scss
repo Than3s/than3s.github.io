@@ -1141,6 +1141,153 @@ Modules - reusable parts of our design
 }
 
 
+// Theme toggle button
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  margin-left: 20px;
+  line-height: inherit;
+  vertical-align: baseline;
+  display: inline;
+  font-weight: 300;
+
+  @include mobile {
+    margin: 0 10px;
+  }
+
+  .theme-toggle-dark {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .theme-toggle {
+  .theme-toggle-light {
+    display: none;
+  }
+  .theme-toggle-dark {
+    display: inline;
+  }
+}
+
+// Dark mode overrides
+html[data-theme="dark"] {
+  body {
+    background: #1a1a1a;
+    color: #d0d0d0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e8e8e8;
+  }
+
+  a {
+    color: #6aacf0;
+    &:hover, &:active {
+      color: #6aacf0;
+    }
+  }
+
+  nav a {
+    color: #d0d0d0;
+    @include mobile {
+      color: #6aacf0;
+    }
+  }
+
+  .site-name a {
+    color: #e8e8e8;
+  }
+
+  .site-description {
+    color: #909090;
+  }
+
+  .date {
+    color: #909090;
+  }
+
+  .masthead {
+    border-bottom-color: #383838;
+  }
+
+  .posts > .post {
+    border-bottom-color: #383838;
+  }
+
+  .wrapper-footer {
+    background-color: #111111;
+  }
+
+  blockquote {
+    background-color: #3d3800;
+    color: #c0b878;
+  }
+
+  .you-may-like {
+    background-color: #1c3012;
+    color: #90b878;
+  }
+
+  table tr {
+    background-color: #252525;
+    border-top-color: #383838;
+  }
+
+  table tr:nth-child(2n) {
+    background-color: #2d2d2d;
+  }
+
+  table tr th, table tr td {
+    border-color: #383838;
+  }
+
+  #search-input {
+    background-color: #252525;
+    border-color: #383838;
+    color: #d0d0d0;
+  }
+
+  .pagination a, .pagination span {
+    background-color: #252525;
+    border-color: #383838;
+    color: #d0d0d0;
+  }
+
+  .pagination a:hover {
+    background-color: #333333;
+    color: #e8e8e8;
+  }
+
+  .share-box {
+    color: #d0d0d0;
+  }
+
+  .text-link {
+    color: #d0d0d0;
+    border-bottom-color: #d0d0d0;
+  }
+
+  .chip {
+    background-color: #333333;
+    color: #d0d0d0;
+  }
+
+  .author_title, .post_date {
+    color: #909090;
+  }
+
+  body:after {
+    background: linear-gradient(to right, #1a1a1a 0, #2196F3 33%, #E91E63 66%, #000 100%);
+  }
+
+  .svg-icon {
+    filter: invert(1) brightness(1.5);
+  }
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
     {% seo title=false %}
@@ -12,6 +12,13 @@
     <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
     {% include analytics_head.html %}
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      })();
+    </script>
   </head>
 
   <body>
@@ -33,6 +40,10 @@
               <a href="{{ site.baseurl }}/about">About</a>
               <a href="{{ site.baseurl }}/categories">Tags</a>
               <a href="{{ site.baseurl }}/archive">Archive</a>
+              <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <span class="theme-toggle-light">🌙</span>
+                <span class="theme-toggle-dark">☀️</span>
+              </button>
             </nav>
           </header>
         </div>
@@ -54,5 +65,13 @@
     </div>
 
     {% include analytics.html %}
+    <script>
+      function toggleTheme() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      }
+    </script>
   </body>
 </html>
