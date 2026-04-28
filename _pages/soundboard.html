@@ -1,0 +1,357 @@
+---
+layout: none
+permalink: /soundboard/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0f1a;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #a78bfa;
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #2d2f45;
+    }
+
+    /* ── Mixer ── */
+    .mixer {
+      background: #111326;
+      border: 1px solid #2d2f45;
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mixer-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 0.75rem;
+    }
+
+    .mixer-sliders {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .slider-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 36px;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .slider-row label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .slider-row input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: #2d2f45;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .slider-row input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #7c3aed;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .slider-row input[type=range]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #7c3aed;
+      border: none;
+      cursor: pointer;
+    }
+
+    .slider-row input[type=range]:hover::-webkit-slider-thumb { background: #9d62f5; }
+    .slider-row input[type=range]:hover::-moz-range-thumb     { background: #9d62f5; }
+
+    .slider-val {
+      font-size: 0.65rem;
+      color: #6b7280;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-stop-all {
+      background: #1a1c2e;
+      color: #9ca3af;
+      border: 1px solid #374151;
+      padding: 0.45rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-stop-all:hover {
+      background: #27203d;
+      color: #e5e7eb;
+      border-color: #6b7280;
+    }
+
+    /* ── Categories & Tiles ── */
+    .category {
+      margin-bottom: 2rem;
+    }
+
+    .category-name {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 0.6rem;
+      padding-left: 0.2rem;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .tile {
+      background: #13152a;
+      border: 1px solid #252840;
+      border-radius: 8px;
+      padding: 0.7rem 0.5rem;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      min-height: 84px;
+      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, transform 0.08s;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .tile:hover {
+      border-color: #3f4468;
+      background: #191c30;
+    }
+
+    .tile:active {
+      transform: scale(0.94);
+    }
+
+    .tile.playing {
+      border-color: #7c3aed;
+      background: #170e35;
+      box-shadow: 0 0 10px rgba(124, 58, 237, 0.25), inset 0 0 0 1px #7c3aed;
+    }
+
+    @keyframes flash-once {
+      0%   { background: #3b1c00; border-color: #d97706; box-shadow: 0 0 12px rgba(217,119,6,0.4); }
+      100% { background: #13152a; border-color: #252840; box-shadow: none; }
+    }
+
+    .tile.flash {
+      animation: flash-once 0.5s ease-out forwards;
+    }
+
+    .tile-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .tile-name {
+      font-size: 0.68rem;
+      text-align: center;
+      line-height: 1.35;
+      color: #d1d5db;
+      word-break: break-word;
+    }
+
+    .tile.playing .tile-name { color: #ede9fe; }
+
+    .tile-badge {
+      font-size: 0.52rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .badge-loop               { background: #1e1a3d; color: #7c6fc7; }
+    .tile.playing .badge-loop { background: #4c1d95; color: #ddd6fe; }
+    .badge-once               { background: #1c1305; color: #78580e; }
+
+    .playing-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7c3aed;
+      opacity: 0;
+      transition: opacity 0.2s;
+      animation: pulse-dot 1.4s ease-in-out infinite;
+      animation-play-state: paused;
+    }
+
+    .tile.playing .playing-dot {
+      opacity: 1;
+      animation-play-state: running;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1);   opacity: 1; }
+      50%       { transform: scale(0.5); opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚔ Soundboard</h1>
+
+  <div class="mixer">
+    <div class="mixer-label">Mixer</div>
+    <div class="mixer-sliders">
+      <div class="slider-row">
+        <label for="vol-ambient">Ambient</label>
+        <input type="range" id="vol-ambient" min="0" max="100" value="80"
+               oninput="setVolume('ambient', this.value)">
+        <span class="slider-val" id="val-ambient">80%</span>
+      </div>
+      <div class="slider-row">
+        <label for="vol-music">Music</label>
+        <input type="range" id="vol-music" min="0" max="100" value="80"
+               oninput="setVolume('music', this.value)">
+        <span class="slider-val" id="val-music">80%</span>
+      </div>
+      <div class="slider-row">
+        <label for="vol-oneshot">One-time</label>
+        <input type="range" id="vol-oneshot" min="0" max="100" value="100"
+               oninput="setVolume('oneshot', this.value)">
+        <span class="slider-val" id="val-oneshot">100%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-stop-all" onclick="stopAll()">■ Stop All</button>
+  </div>
+
+  {% for category in site.data.soundboard %}
+  <div class="category">
+    <div class="category-name">{{ category.category }}</div>
+    <div class="tiles">
+      {% for sound in category.sounds %}
+      {% assign is_loop = sound.loop | default: false %}
+      <div class="tile"
+           data-file="{{ sound.file }}"
+           data-loop="{{ is_loop }}"
+           data-type="{{ category.type }}"
+           onclick="handleTile(this)">
+        <div class="playing-dot"></div>
+        <div class="tile-icon">{% if is_loop %}↻{% else %}▶{% endif %}</div>
+        <div class="tile-name">{{ sound.name }}</div>
+        <span class="tile-badge {% if is_loop %}badge-loop{% else %}badge-once{% endif %}">
+          {% if is_loop %}loop{% else %}once{% endif %}
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <script>
+    const audioMap = new Map();
+    const volumes  = { ambient: 0.8, music: 0.8, oneshot: 1.0 };
+
+    function getAudio(tile) {
+      const file = tile.dataset.file;
+      if (!audioMap.has(file)) {
+        const audio = new Audio('/assets/sounds/' + file);
+        audio.loop   = tile.dataset.loop === 'true';
+        audio.volume = volumes[tile.dataset.type] ?? 1.0;
+        audioMap.set(file, audio);
+      }
+      return audioMap.get(file);
+    }
+
+    function setVolume(type, value) {
+      volumes[type] = value / 100;
+      document.getElementById('val-' + type).textContent = value + '%';
+      document.querySelectorAll('.tile[data-type="' + type + '"]').forEach(tile => {
+        const audio = audioMap.get(tile.dataset.file);
+        if (audio) audio.volume = volumes[type];
+      });
+    }
+
+    function handleTile(tile) {
+      const isLoop = tile.dataset.loop === 'true';
+      const audio  = getAudio(tile);
+
+      if (isLoop) {
+        if (tile.classList.contains('playing')) {
+          audio.pause();
+          tile.classList.remove('playing');
+        } else {
+          audio.play().catch(() => {});
+          tile.classList.add('playing');
+        }
+      } else {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+        tile.classList.remove('flash');
+        void tile.offsetWidth;
+        tile.classList.add('flash');
+      }
+    }
+
+    function stopAll() {
+      audioMap.forEach(audio => { audio.pause(); audio.currentTime = 0; });
+      document.querySelectorAll('.tile.playing').forEach(t => t.classList.remove('playing'));
+    }
+  </script>
+
+</body>
+</html>

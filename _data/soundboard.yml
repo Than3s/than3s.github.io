@@ -1,0 +1,69 @@
+# TTRPG Soundboard configuration
+# Add sounds to assets/sounds/ and reference them here.
+# loop: true  → tile toggles on/off, can layer with other loops
+# loop: false → tile plays once per click
+# type: ambient | music | oneshot  → controls which volume slider affects this category
+
+- category: Ambience
+  type: ambient
+  sounds:
+    - name: Forest
+      file: forest.mp3
+      loop: true
+    - name: Rain
+      file: rain.mp3
+      loop: true
+    - name: Tavern
+      file: tavern.mp3
+      loop: true
+    - name: Cave Drip
+      file: cave_drip.mp3
+      loop: true
+    - name: Ocean
+      file: ocean.mp3
+      loop: true
+
+- category: Combat
+  type: ambient
+  sounds:
+    - name: Battle Drums
+      file: battle_drums.mp3
+      loop: true
+    - name: Sword Clash
+      file: sword_clash.mp3
+      loop: false
+    - name: Arrow Whoosh
+      file: arrow_whoosh.mp3
+      loop: false
+    - name: Magic Burst
+      file: magic_burst.mp3
+      loop: false
+
+- category: Events
+  type: oneshot
+  sounds:
+    - name: Thunder
+      file: mothership_yellow_cassette.mp3
+      loop: false
+    - name: Door Creak
+      file: door_creak.mp3
+      loop: false
+    - name: Crowd Gasp
+      file: crowd_gasp.mp3
+      loop: false
+    - name: Bell Toll
+      file: bell_toll.mp3
+      loop: false
+
+- category: Cassettes
+  type: music
+  sounds:
+    - name: Yellow Cassette
+      file: mothership_yellow_cassette.mp3
+      loop: false
+    - name: Blue Cassette
+      file: mothership_blue_cassette.mp3
+      loop: false
+    - name: White Cassette
+      file: mothership_white_cassette.mp3
+      loop: false
