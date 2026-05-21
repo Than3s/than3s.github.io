@@ -7,20 +7,18 @@
 - category: Ambience
   type: ambient
   sounds:
-    - name: Forest
-      file: forest.mp3
+    - name: Synth loop
+      file: Alien_Starship-synth_tone_loop.mp3
       loop: true
-    - name: Rain
-      file: rain.mp3
+    - name: Metal drip
+      file: Alien_Starship-drips_metal_loop.mp3
       loop: true
-    - name: Tavern
-      file: tavern.mp3
-      loop: true
-    - name: Cave Drip
-      file: cave_drip.mp3
-      loop: true
-    - name: Ocean
-      file: ocean.mp3
+
+- category: Music
+  type: music
+  sounds:
+    - name: Wake up jazz
+      file: lofi jazz.mp3
       loop: true
 
 - category: Combat
@@ -29,34 +27,19 @@
     - name: Battle Drums
       file: battle_drums.mp3
       loop: true
-    - name: Sword Clash
-      file: sword_clash.mp3
-      loop: false
-    - name: Arrow Whoosh
-      file: arrow_whoosh.mp3
-      loop: false
-    - name: Magic Burst
-      file: magic_burst.mp3
-      loop: false
 
 - category: Events
   type: oneshot
   sounds:
-    - name: Thunder
-      file: mothership_yellow_cassette.mp3
+    - name: Door Open
+      file: Alien_Starship-door_open.mp3
       loop: false
-    - name: Door Creak
-      file: door_creak.mp3
-      loop: false
-    - name: Crowd Gasp
-      file: crowd_gasp.mp3
-      loop: false
-    - name: Bell Toll
-      file: bell_toll.mp3
+    - name: Elevator broken
+      file: machine whirring up then stopping.mp3
       loop: false
 
 - category: Cassettes
-  type: music
+  type: oneshot
   sounds:
     - name: Yellow Cassette
       file: mothership_yellow_cassette.mp3

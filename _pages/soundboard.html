@@ -193,8 +193,17 @@ permalink: /soundboard/
       100% { background: #13152a; border-color: #252840; box-shadow: none; }
     }
 
+    @keyframes flash-playing {
+      0%   { background: #3b1c00; border-color: #d97706; box-shadow: 0 0 12px rgba(217,119,6,0.4); }
+      100% { background: #170e35; border-color: #7c3aed; box-shadow: 0 0 10px rgba(124, 58, 237, 0.25), inset 0 0 0 1px #7c3aed; }
+    }
+
     .tile.flash {
       animation: flash-once 0.5s ease-out forwards;
+    }
+
+    .tile.playing.flash {
+      animation-name: flash-playing;
     }
 
     .tile-icon {
@@ -304,6 +313,7 @@ permalink: /soundboard/
 
   <script>
     const audioMap = new Map();
+    const activeTileMap = new Map();
     const volumes  = { ambient: 0.8, music: 0.8, oneshot: 1.0 };
 
     function getAudio(tile) {
@@ -340,7 +350,23 @@ permalink: /soundboard/
         }
       } else {
         audio.currentTime = 0;
-        audio.play().catch(() => {});
+        const previousTile = activeTileMap.get(tile.dataset.file);
+        if (previousTile && previousTile !== tile) {
+          previousTile.classList.remove('playing');
+        }
+
+        activeTileMap.set(tile.dataset.file, tile);
+        tile.classList.add('playing');
+        audio.onended = () => {
+          if (activeTileMap.get(tile.dataset.file) === tile) {
+            tile.classList.remove('playing');
+            activeTileMap.delete(tile.dataset.file);
+          }
+        };
+        audio.play().catch(() => {
+          tile.classList.remove('playing');
+          activeTileMap.delete(tile.dataset.file);
+        });
         tile.classList.remove('flash');
         void tile.offsetWidth;
         tile.classList.add('flash');
@@ -350,6 +376,7 @@ permalink: /soundboard/
     function stopAll() {
       audioMap.forEach(audio => { audio.pause(); audio.currentTime = 0; });
       document.querySelectorAll('.tile.playing').forEach(t => t.classList.remove('playing'));
+      activeTileMap.clear();
     }
   </script>
 
