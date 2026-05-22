@@ -42,8 +42,8 @@
 - category: Combat
   type: ambient
   sounds:
-    - name: Battle Drums
-      file: battle_drums.mp3
+    - name: Tense Rush - Monster / Combat
+      file: moderately tense rush.mp3
       loop: true
 
 - category: Events
