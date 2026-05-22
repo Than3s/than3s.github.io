@@ -13,12 +13,30 @@
     - name: Metal drip
       file: Alien_Starship-drips_metal_loop.mp3
       loop: true
+    - name: Eerie noise
+      file: Alien_Starship-eerie_noise_loop.mp3
+      loop: true
+    - name: Computer noises
+      file: Alien_Starship-computer_noises_loop.mp3
+      loop: true
+    - name: Ambient Space Station
+      file: space station ambience.mp3
+      loop: true
+    - name: Maintenance Halls (Station)
+      file: maintenance halls.mp3
+      loop: true
+    - name: Mines
+      file: structure graoning, deep bass, medium.mp3
+      loop: true
 
 - category: Music
   type: music
   sounds:
     - name: Wake up jazz
       file: lofi jazz.mp3
+      loop: true
+    - name: Ambient Space Atmo
+      file: ambient_space_atmo.mp3
       loop: true
 
 - category: Combat
