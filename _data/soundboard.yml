@@ -26,7 +26,7 @@
       file: maintenance halls.mp3
       loop: true
     - name: Mines
-      file: structure graoning, deep bass, medium.mp3
+      file: creepy-strange, ambient, very long.mp3
       loop: true
 
 - category: Music
@@ -59,12 +59,12 @@
 - category: Cassettes
   type: oneshot
   sounds:
-    - name: Yellow Cassette
+    - name: Yellow Cassette (Mike)
       file: mothership_yellow_cassette.mp3
       loop: false
-    - name: Blue Cassette
+    - name: Blue Cassette (Sonya)
       file: mothership_blue_cassette.mp3
       loop: false
-    - name: White Cassette
+    - name: White Cassette (Giovanni)
       file: mothership_white_cassette.mp3
       loop: false
